@@ -7,7 +7,13 @@ public class GoogleTest extends BaseTest {
 
     @Test
     public void openGoogle() {
-        driver.get("https://www.google.com");
-        System.out.println(driver.getTitle());
+
+        getDriver().get("https://www.google.com");
+
+        System.out.println(
+                Thread.currentThread().getId()
+                        + " -> "
+                        + getDriver().getTitle()
+        );
     }
 }
